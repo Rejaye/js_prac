@@ -1,9 +1,66 @@
+#profile{
+    display: flex;
+    justify-content: center;
+    gap:5rem;
+    height: 80vh;
+} 
+
+.section__pic-container{
+    display: flex;
+    height: 400px;
+    width: 400px; 
+    margin: auto 0; 
+}
+
+.section__text{
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p{
+    font-weight:600;
+}
+section__text__p1{
+    /* text-align: center; */
+} 
+
+.section__text__p2{
+    font-size: 1.75rem; 
+    margin-bottom: 1rem; 
+}
+
+.title{
+    font-size: 3rem;
+    /* text-align: center; */
+}
+
+#social-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+.icon{
+    cursor: pointer;
+    height: 2rem;
+}
+/* BUTTONS */
+
+.btn-container{
+    display: flex;            /* Optional: Use flexbox for centering text */
+    align-items: center;      /* Center text vertically */
+    justify-content: space-between;  /* Center text horizontally */
+    gap: 2rem;
+    }
+
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
 	"name": "Node.js",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm"
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -15,7 +72,22 @@
 	// "postCreateCommand": "yarn install",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"vscode-icons-team.vscode-icons",
+				"wayou.vscode-todo-highlight"
+			],
+			"settings": {
+				"editor.fontSize": 32,
+				"terminal.integrated.fontSize": 24,
+				"editor.wordWrap": "on"
+			}
+			
+		}
+		
+	 }
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
